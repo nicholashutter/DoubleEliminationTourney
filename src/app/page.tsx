@@ -1,6 +1,9 @@
 "use client"
 import Link from "next/link";
-import "./homePage.css"; 
+import Button from "@mui/material/Button";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "@/app/theme"
+import "@/app/homePage.css"; 
 
 function authenticationFormHandler(): void {
   alert("Submission Complete");
@@ -8,7 +11,7 @@ function authenticationFormHandler(): void {
 
 export default function HomePage() {
   return (
-    <>
+    <ThemeProvider theme ={theme}>
       <div className="container">
         <h2 className="title">Welcome!</h2>
 
@@ -24,29 +27,29 @@ export default function HomePage() {
           <input type="password" id="password" name="password" />
 
           <span className="switch-text">
-            <Link style={{ color: "white" }}  href={"/menu"}>
-              <button onClick={()=>authenticationFormHandler}>
+            <Link href={"/menu"}>
+              <Button variant="contained" onClick={()=>authenticationFormHandler}>
                 Sign In
-              </button>
+              </Button>
             </Link>
 
             <label className="form-group">Or</label>
 
-            <Link style={{ color: "white" }} href={"/createguest"}>
-              <button>
+            <Link href={"/createguest"}>
+              <Button variant="contained">
                 Continue As Guest
-              </button>
+              </Button>
             </Link>
 
-            <Link style={{ color: "white" }} href={`/signup`}>
-              <button>
+            <Link href={`/signup`}>
+              <Button variant="contained">
                 Sign Up Here
-              </button>
+              </Button>
             </Link>
           </span>
         </div>
       </div>
-    </>
+    </ThemeProvider>
   );
 };
 
