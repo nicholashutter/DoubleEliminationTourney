@@ -3,10 +3,10 @@ import Link from "next/link";
 import Button from "@mui/material/Button";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "@/app/theme"
-import "@/app/homePage.css"; 
+import "@/app/page.css"; 
 
 function authenticationFormHandler(): void {
-  alert("Submission Complete");
+  window.alert("Submission Success");
 }
 
 export default function HomePage() {
@@ -28,7 +28,7 @@ export default function HomePage() {
 
           <span className="switch-text">
             <Link href={"/menu"}>
-              <Button variant="contained" onClick={()=>authenticationFormHandler}>
+              <Button variant="contained" onClick={authenticationFormHandler}>
                 Sign In
               </Button>
             </Link>

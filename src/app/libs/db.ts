@@ -4,8 +4,8 @@ import mysql, {PoolOptions} from "mysql2/promise";
 const fightersOptions:PoolOptions =
     {
         host:process.env.DB_HOST, 
-        user: process.env.DB_USER,
-        password: process.env.DB_PASS, 
+        user:process.env.DB_USER,
+        password:process.env.DB_PASS, 
         database: "tourneydb",
         waitForConnections:true,
       
@@ -67,7 +67,8 @@ async function doQuery(selectdb: selectdb, query:string, params:Array<string>)
     }
     catch (e)
     {
-        console.error("%c ${e}. Err 763", "color:red");
+        console.error(`%c ${e}. Err 763`, "color:red");
+        return e;
     }
 }
 
