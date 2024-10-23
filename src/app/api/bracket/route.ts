@@ -24,10 +24,8 @@
         start round
         select winner
         end round
-    update players
     end match
     end loop
-    update players
 */
   
   export async function GET(request:Request) {
