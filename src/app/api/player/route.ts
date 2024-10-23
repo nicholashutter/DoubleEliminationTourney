@@ -15,3 +15,7 @@ export async function PUT(request: Request)
     return new Response("This route will update a players properties:take in properties and return success or failure");
 }
 
+export async function DELETE(request: Request)
+{
+    return new Response("This route will delete a player:take in playerID and return success or failure");
+}
