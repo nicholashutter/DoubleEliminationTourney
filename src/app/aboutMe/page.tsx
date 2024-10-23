@@ -7,7 +7,7 @@ import {ReactNode } from "react";
 
 
 
-const AboutMe = (props: { children?: ReactNode }): React.JSX.Element => {
+const AboutMe = (): React.JSX.Element => {
   return (
     <>
       <meta charSet="UTF-8" />

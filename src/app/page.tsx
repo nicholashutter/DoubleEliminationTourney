@@ -27,7 +27,7 @@ export default function HomePage() {
           <input type="password" id="password" name="password" />
 
           <span className="switch-text">
-            <Link href={"/menu"}>
+            <Link href={"/tourneyMenu"}>
               <Button variant="contained" onClick={authenticationFormHandler}>
                 Sign In
               </Button>
@@ -35,13 +35,13 @@ export default function HomePage() {
 
             <label className="form-group">Or</label>
 
-            <Link href={"/createguest"}>
+            <Link href={"/guestSignIn"}>
               <Button variant="contained">
                 Continue As Guest
               </Button>
             </Link>
 
-            <Link href={`/signup`}>
+            <Link href={`/signUp`}>
               <Button variant="contained">
                 Sign Up Here
               </Button>
