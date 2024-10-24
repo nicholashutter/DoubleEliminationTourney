@@ -51,7 +51,7 @@ const SignUp = (props: { children?: ReactNode }) => {
           </div>
           <div className="form-group"> 
             <span className="switch-text">
-              Already have an account? <Link href="HomePage.html">Sign In Here</Link>
+              Already have an account? <Link href="/">Sign In Here</Link>
             </span>
           </div>
         </form>

@@ -2,12 +2,15 @@
 import User from "@/app/resources/user";
 
 import "./page.css";
-
+import {ThemeProvider} from "@mui/material/styles";
 import { ReactNode } from "react";
+import theme from "@/app/theme";
+import Link from "next/link";
+import { Button } from "@mui/material";
 
 const JoinTourney = (props: { children?: ReactNode }): React.JSX.Element => {
   return (
-    <>
+    <ThemeProvider theme = {theme}>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Join Room</title>
@@ -24,17 +27,17 @@ const JoinTourney = (props: { children?: ReactNode }): React.JSX.Element => {
             />
           </div>
           <div className="form-group">
-            <input type="submit" defaultValue="Join Room" />
-            <a href="TourneyMenu.html" className="cancel-link">
+            <Button id="submitButton" variant="contained" type="submit">Join Room</Button>
+            <Link href="/tourneyMenu" className="cancel-link">
               Cancel and Return to Main Menu
-            </a>
+            </Link>
           </div>
         </form>
         <div id="waiting-message" className="waiting-message">
           Waiting for other players...
         </div>
       </div>
-    </>
+    </ThemeProvider>
   );
 };
 

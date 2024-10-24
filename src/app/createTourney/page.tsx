@@ -3,12 +3,14 @@
 import User from "@/app/resources/user";
 import './page.css';
 import {ReactNode} from 'react';
-
-
+import Link from "next/link";
+import { ThemeProvider } from "@mui/material/styles";
+import {Button} from "@mui/material"; 
+import theme from "@/app/theme"; 
 
 const CreateTourney = (props: {children?: ReactNode;}) => {
   return (
-    <>
+    <ThemeProvider theme = {theme}>
     <meta charSet="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create Tourney</title>
@@ -43,14 +45,14 @@ const CreateTourney = (props: {children?: ReactNode;}) => {
           />
         </div>
         <div className="form-group">
-          <input type="submit" defaultValue="Host Tourney" />
-          <a href="TourneyMenu.html" className="cancel-link">
+          <Button type="submit" id="submitButton" >Create Tourney</Button>
+          <Link href="/tourneyMenu" className="cancel-link">
             Cancel and Return to Main Menu
-          </a>
+          </Link>
         </div>
       </form>
     </div>
-  </>
+  </ThemeProvider>
   );
 }
 
