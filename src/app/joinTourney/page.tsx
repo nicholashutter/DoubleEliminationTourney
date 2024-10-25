@@ -3,12 +3,12 @@ import User from "@/app/resources/user";
 
 import "./page.css";
 import {ThemeProvider} from "@mui/material/styles";
-import { ReactNode } from "react";
+
 import theme from "@/app/theme";
 import Link from "next/link";
 import { Button } from "@mui/material";
 
-const JoinTourney = (props: { children?: ReactNode }): React.JSX.Element => {
+const JoinTourney = () => {
   return (
     <ThemeProvider theme = {theme}>
       <meta charSet="UTF-8" />

@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Button from "@mui/material/Button";
 import { ThemeProvider } from "@mui/material/styles";
-import theme from "@/app/theme"
+import theme from "@/app/theme";
 import "@/app/page.css"; 
 
 function authenticationFormHandler(): void {

@@ -2,10 +2,10 @@
 import User from "@/app/resources/user";
 import "@/app/aboutMe/page.css";
 
-import {ReactNode } from "react";
-
-
-
+import Link from "next/link";
+import Button from "@mui/material/Button";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "@/app/theme";
 
 const AboutMe = (): React.JSX.Element => {
   return (

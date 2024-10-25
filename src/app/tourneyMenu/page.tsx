@@ -1,14 +1,14 @@
 'use client'
-
-import User from "@/app/resources/user";
-import { useState, useEffect, ReactNode } from "react";
-
-import "./page.css";
 import Link from "next/link";
+import Button from "@mui/material/Button";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "@/app/theme";
+import "./page.css";
 
-const TourneyMenu = (props: { children?: ReactNode }) => {
+
+const TourneyMenu = () => {
   return (
-    <>
+    <ThemeProvider theme = {theme}>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Super Smash Bros Inspired Main Menu</title>
@@ -31,7 +31,7 @@ const TourneyMenu = (props: { children?: ReactNode }) => {
           </Link>
         </div>
       </div>
-    </>
+    </ThemeProvider>
   );
 };
 

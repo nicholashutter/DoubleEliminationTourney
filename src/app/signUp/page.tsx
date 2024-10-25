@@ -3,8 +3,9 @@ import User from "@/app/resources/user";
 import Link from "next/link";
 import "./page.css";
 import { useState, ReactNode } from "react";
-
-
+import theme from "@/app/theme"; 
+import {ThemeProvider} from "@mui/material/styles";
+import Button from "@mui/material/Button"; 
 
 
 
@@ -23,11 +24,11 @@ const SignUp = (props: { children?: ReactNode }) => {
 
   function handleSubmit (e:React.FormEvent)
   {
-   
+   window.alert("Submission Success"); 
   }
 
   return (
-    <>
+    <ThemeProvider theme = {theme}>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>User Registration</title>
@@ -47,16 +48,16 @@ const SignUp = (props: { children?: ReactNode }) => {
             <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
           </div>
           <div className="form-group">
-            <input type="submit" defaultValue="Sign Up" />
+            <input type="button" onClick={handleSubmit} id ="submitButton" defaultValue="Sign Up" />
           </div>
           <div className="form-group"> 
             <span className="switch-text">
-              Already have an account? <Link href="/">Sign In Here</Link>
+              Already have an account? <Link  href="/">Sign In Here</Link>
             </span>
           </div>
         </form>
       </div>
-    </>
+    </ThemeProvider>
   );
 };
 

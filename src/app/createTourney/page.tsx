@@ -2,13 +2,12 @@
 
 import User from "@/app/resources/user";
 import './page.css';
-import {ReactNode} from 'react';
 import Link from "next/link";
 import { ThemeProvider } from "@mui/material/styles";
 import {Button} from "@mui/material"; 
 import theme from "@/app/theme"; 
 
-const CreateTourney = (props: {children?: ReactNode;}) => {
+const CreateTourney = () => {
   return (
     <ThemeProvider theme = {theme}>
     <meta charSet="UTF-8" />
