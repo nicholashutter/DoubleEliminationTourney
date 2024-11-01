@@ -1,6 +1,6 @@
 
 import User from "@/app/resources/user";
-import playerManager from "@/app/player";
+import playerManager from "@/app/Player";
 import crypto from "crypto";
 
 /* Use the below logical flow to write the rest of the api routes for the bracket*/

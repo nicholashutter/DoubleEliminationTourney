@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import User from "@/app/resources/user"
+import {User} from "@/app/resources/user"
 
 class Player implements User
 {
@@ -182,26 +182,25 @@ Functions Getters and Setters with some basic input validation
 }
 
 
-export default class playerManager 
+export default class PlayerManager
 {
-  private static instance: playerManager;
+  static #instance: PlayerManager;
   private Players: Array<Player>;
 
-  private constructor(
-
+  private constructor( 
   )
   {
     this.Players = [];
   }
-  static get getInstance(): playerManager
+  public static get getInstance(): PlayerManager
   {
-    if (!playerManager.instance)
+    if (!PlayerManager.#instance)
     {
-      playerManager.instance = new playerManager();
+      PlayerManager.instance = new PlayerManager();
     }
-    return playerManager.instance;
+    return PlayerManager.#instance;
   }
-  createPlayer(
+  public createPlayer(
     playerName: string,
     passwordHash: string,
     email: string,
@@ -410,10 +409,6 @@ export default class playerManager
       }
     }
 
-    //basically this function should destructure all properties from 
-    //player object underneath and then call this.deletePlayer(playerID)
-    //then call this.createPlayer(playerName, passwordHash, email, playerID)
-    //when you create new player add any changed properties while restoring previous ones
   }
   deletePlayer(playerID: number)
   {
@@ -470,7 +465,7 @@ export default class playerManager
       foundPlayer.setPlayerID = newPlayerID;
     }
   }
-  getPlayerName(playerID: number)
+  public getPlayerName(playerID: number)
   {
     {
       const foundPlayer = this.Players.find((player) => player.id === playerID);

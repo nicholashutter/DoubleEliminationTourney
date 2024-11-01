@@ -1,4 +1,5 @@
 
+
 export default interface User
 {
     id: number;
@@ -17,3 +18,4 @@ export default interface User
     datesPlayed: Array<Date>;
 
 }
+
