@@ -3,8 +3,6 @@ import User from "@/app/resources/user";
 import Link from "next/link";
 import "./page.css";
 import { useState, ReactNode } from "react";
-import theme from "@/app/theme"; 
-import {ThemeProvider} from "@mui/material/styles";
 import Button from "@mui/material/Button"; 
 
 
@@ -28,7 +26,7 @@ const SignUp = (props: { children?: ReactNode }) => {
   }
 
   return (
-    <ThemeProvider theme = {theme}>
+    <>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>User Registration</title>
@@ -57,7 +55,7 @@ const SignUp = (props: { children?: ReactNode }) => {
           </div>
         </form>
       </div>
-    </ThemeProvider>
+    </>
   );
 };
 

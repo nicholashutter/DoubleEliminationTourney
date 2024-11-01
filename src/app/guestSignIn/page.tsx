@@ -3,9 +3,9 @@
 import User from "@/app/resources/user";
 import "./page.css";
 import {ReactNode } from "react";
-import {ThemeProvider} from "@mui/material/styles";
+
 import Button from "@mui/material/Button"; 
-import theme from "@/app/theme";
+
 
 //this link element will have to be ported over
 import Link from 'next/link';
@@ -16,7 +16,7 @@ function handleSubmit(){
 
 const GuestSignUp = (props: { children?: ReactNode }) => {
   return (
-    <ThemeProvider theme = {theme}>
+    <>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>User Registration</title>
@@ -39,7 +39,7 @@ const GuestSignUp = (props: { children?: ReactNode }) => {
           </div>
         </form>
       </div>
-    </ThemeProvider>
+    </>
   );
 };
 
