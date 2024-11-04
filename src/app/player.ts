@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import {User} from "@/app/resources/user"
+import User from "@/app/resources/user"
 
 class Player implements User
 {
