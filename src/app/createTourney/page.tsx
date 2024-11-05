@@ -7,9 +7,18 @@ import { ThemeProvider } from "@mui/material/styles";
 import {Button} from "@mui/material"; 
 import theme from "@/app/theme"; 
 
+
+
+function handleSubmit ()
+{
+  window.alert("Submission Success"); 
+}
+
+
+
 const CreateTourney = () => {
   return (
-    <ThemeProvider theme = {theme}>
+    <>
     <meta charSet="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create Tourney</title>
@@ -44,14 +53,14 @@ const CreateTourney = () => {
           />
         </div>
         <div className="form-group">
-          <Button type="submit" id="submitButton" >Create Tourney</Button>
+          <Button type="submit" id="submitButton" onClick={handleSubmit} >Create Tourney</Button>
           <Link href="/tourneyMenu" className="cancel-link">
             Cancel and Return to Main Menu
           </Link>
         </div>
       </form>
     </div>
-  </ThemeProvider>
+  </>
   );
 }
 

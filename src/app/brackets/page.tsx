@@ -1,17 +1,18 @@
 "use client"
 import Link from "next/link";
 import "./page.css";
+import {ReactNode} from "react";
 
-interface Props{
-  bracketContent: React.ComponentType<any>;
+interface GenericBracketProps {
+  children: ReactNode;
 }
 
-export const GenericBracket = (Props) => 
+export const GenericBracket = ({children}:GenericBracketProps) => 
 {
   return (
     <>
     <div className="container">
-        {Props.children}
+        {children}
       <div className="title"></div>
     </div>
     </>
