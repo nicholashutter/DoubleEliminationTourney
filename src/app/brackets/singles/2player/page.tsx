@@ -22,9 +22,6 @@ const TwoPlayer = (props: Props) =>
         y1: window.innerHeight/2,
         y2: window.innerHeight/2,
     });
-
-    
-
     const GenericBracketRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() =>
@@ -45,9 +42,6 @@ const TwoPlayer = (props: Props) =>
                         y1: centerY,
                         y2: centerY,
                     });
-
-                
-
             };
 
             updateCoordinates();
@@ -64,12 +58,19 @@ const TwoPlayer = (props: Props) =>
 
     const { x1, x2, y1, y2 } = coordinates;
 
-
+    const [windowBound, setWindowBound] = useState({
+        leftBound:(window.innerHeight*.1),
+        rightBound:(window.innerWidth*.1),
+    })
 
     //almost there but this will need to be added to useEffect to force the re render
-
-    const leftBound = (window.innerHeight*0.1);
-    const rightBound = (window.innerHeight*.1);
+    const{leftBound, rightBound} = windowBound;
+    useEffect(() =>{
+        setWindowBound({
+            leftBound:(window.innerWidth*.01),
+            rightBound:(window.innerWidth*.01)
+        });
+    }, [leftBound, rightBound])
 
     const stringBounds = leftBound.toString() + "," + rightBound.toString();
 
