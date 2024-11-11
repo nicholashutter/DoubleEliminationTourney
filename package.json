@@ -12,12 +12,14 @@
     "@emotion/cache": "^11.13.1",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
-    "@mui/material": "^6.1.5",
-    "@mui/material-nextjs": "^6.1.5",
+    "@material-tailwind/react": "^2.1.10",
+    "autoprefixer": "^10.4.20",
     "mysql2": "^3.11.3",
     "next": "15.0.0",
+    "postcss": "^8.4.48",
     "react": "19.0.0-rc-65a56d0e-20241020",
-    "react-dom": "19.0.0-rc-65a56d0e-20241020"
+    "react-dom": "19.0.0-rc-65a56d0e-20241020",
+    "tailwindcss": "^3.4.14"
   },
   "devDependencies": {
     "@types/node": "^20",

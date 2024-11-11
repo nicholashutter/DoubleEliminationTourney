@@ -59,8 +59,10 @@ const TwoPlayer = (props: Props) =>
     const { x1, x2, y1, y2 } = coordinates;
 
     const [windowBound, setWindowBound] = useState({
-        leftBound:(window.innerHeight*.1),
-        rightBound:(window.innerWidth*.1),
+        leftBound:(window.innerHeight*.01),
+        rightBound:(window.innerWidth*.01),
+        topBound:(window.innerHeight*.01),
+        bottomBound:(window.innerHeight*.01)
     })
 
     //almost there but this will need to be added to useEffect to force the re render
@@ -68,7 +70,9 @@ const TwoPlayer = (props: Props) =>
     useEffect(() =>{
         setWindowBound({
             leftBound:(window.innerWidth*.01),
-            rightBound:(window.innerWidth*.01)
+            rightBound:(window.innerWidth*.01),
+            topBound:(window.innerHeight*.01),
+            bottomBound:(window.innerHeight*.01)
         });
     }, [leftBound, rightBound])
 

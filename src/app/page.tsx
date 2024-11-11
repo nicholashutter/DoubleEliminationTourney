@@ -1,8 +1,7 @@
 "use client"
 import Link from "next/link";
-import Button from "@mui/material/Button";
-import { ThemeProvider } from "@mui/material/styles";
-import theme from "@/app/theme";
+//import Button from "@mui/material/Button";
+
 import "@/app/page.css"; 
 
 function authenticationFormHandler(): void {
@@ -11,7 +10,7 @@ function authenticationFormHandler(): void {
 
 export default function HomePage() {
   return (
-    <ThemeProvider theme ={theme}>
+    <>
       <div className="container">
         <h2 className="title">Welcome!</h2>
 
@@ -49,7 +48,7 @@ export default function HomePage() {
           </span>
         </div>
       </div>
-    </ThemeProvider>
+    </>
   );
 };
 
